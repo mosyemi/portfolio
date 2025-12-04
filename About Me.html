@@ -1,34 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About Me — Collins Kipchumba Mosyemi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Collins Kipchumba Mosyemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"><a href="index.html"><span class="logo-cm">CM</span></a></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="About Me.html" class="active">About Me</a>
-        <a href="Technical skils.html">Technical Skills</a>
-        <a href="Featured Projects.html">Featured Projects</a>
-        <a href="What I Offer.html">What I Offer</a>
-        <a href="Let's Connect.html">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
 
-  <main style="padding:6rem 1.5rem 4rem;">
-    <h1>About Me</h1>
-    <p>Hi — I'm Collins Kipchumba Mosyemi. I craft secure, intelligent, and scalable solutions across the full technology stack. This page is a placeholder you can edit with more details about your background, experience, and interests.</p>
-  </main>
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
 
-  <footer>
-    <p>&copy; 2024 Collins Kipchumba Mosyemi</p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html" class="active">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="terminal-header-page">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">root@about:~$ cat profile.txt</span>
+            </div>
+
+            <h2 class="section-title glitch" data-text="About Me">
+                About <span>Me</span>
+            </h2>
+
+            <div class="about-grid">
+                <!-- Profile Picture -->
+                <div class="about-image">
+                    <div class="about-picture">
+                        <div class="scan-effect"></div>
+                        <div class="hexagon-border"></div>
+                        <!-- Profile image -->
+                        <img src="images/collo.png" alt="Collins Kipchumba Mosyemi">
+                        <!-- Replace the src with another image if you prefer -->
+                    </div>
+                    <div class="binary-code">01000011 01001101</div>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>
+                                <span class="prompt">&gt;_</span> Who I Am
+                            </h3>
+                            <p>
+                                I'm a passionate Full-Stack Developer with expertise spanning across multiple domains of technology. 
+                                From building robust web applications to securing networks and developing intelligent AI systems, 
+                                I bring a comprehensive approach to solving complex technical challenges.
+                            </p>
+                            <p>
+                                My diverse skill set allows me to see the bigger picture while paying attention to critical details 
+                                in security, performance, and user experience. I'm committed to continuous learning and staying at 
+                                the forefront of technological innovation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Cards -->
+                    <div class="about-cards">
+                        <div class="about-card cyber-card">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Development</h4>
+                            <p>Full-Stack Expert</p>
+                            <div class="card-binary">01000100</div>
+                        </div>
+
+                        <div class="about-card cyber-card">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h4>Security</h4>
+                            <p>Cybersecurity Pro</p>
+                            <div class="card-binary">01010011</div>
+                        </div>
+
+                        <div class="about-card cyber-card">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h4>AI & ML</h4>
+                            <p>Intelligent Systems</p>
+                            <div class="card-binary">01000001</div>
+                        </div>
+
+                        <div class="about-card cyber-card">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h4>Infrastructure</h4>
+                            <p>Systems & Networks</p>
+                            <div class="card-binary">01001001</div>
+                        </div>
+                    </div>
+
+                    <!-- Mission Statement -->
+                    <div class="mission-box">
+                        <div class="mission-header">
+                            <span class="prompt">&gt;&gt;&gt;</span> MISSION_STATEMENT.exe
+                        </div>
+                        <div class="mission-content">
+                            <p>
+                                "To leverage cutting-edge technology and security principles to build solutions that 
+                                not only meet today's challenges but anticipate tomorrow's threats. Every line of code 
+                                is written with security, scalability, and innovation in mind."
+                            </p>
+                        </div>
+                        <div class="mission-footer">
+                            <span>EXIT_CODE: 0 [SUCCESS]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Info Panel -->
+            <div class="system-info-panel">
+                <div class="panel-header">
+                    <span class="prompt">$</span> system-info --verbose
+                </div>
+                <div class="panel-content">
+                    <div class="info-row">
+                        <span class="info-label">NAME:</span>
+                        <span class="info-value">Collins Kipchumba Mosyemi</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">ROLE:</span>
+                        <span class="info-value">Full-Stack Developer</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">SPECIALIZATION:</span>
+                        <span class="info-value">Web Development | Cybersecurity | AI/ML</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">STATUS:</span>
+                        <span class="info-value status-active">● ACTIVE - ACCEPTING PROJECTS</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">LOCATION:</span>
+                        <span class="info-value">Nairobi, Kenya</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">UPTIME:</span>
+                        <span class="info-value">24/7/365</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Binary Code -->
+    <div class="floating-binary" id="floatingBinary"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+            &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with &lt;HTML/&gt; CSS JavaScript()
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

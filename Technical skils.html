@@ -1,34 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Technical Skills — Collins Mosyemi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills - Collins Kipchumba Mosyemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"><a href="index.html"><span class="logo-cm">CM</span></a></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="About Me.html">About Me</a>
-        <a href="Technical skils.html" class="active">Technical Skills</a>
-        <a href="Featured Projects.html">Featured Projects</a>
-        <a href="What I Offer.html">What I Offer</a>
-        <a href="Let's Connect.html">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
 
-  <main style="padding:6rem 1.5rem 4rem;">
-    <h1>Technical Skills</h1>
-    <p>List languages, frameworks, tools, and relevant certifications here. Example categories: Frontend, Backend, DevOps, Security, AI/ML.</p>
-  </main>
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
 
-  <footer>
-    <p>&copy; 2024 Collins Kipchumba Mosyemi</p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html" class="active">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="terminal-header-page">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">root@skills:~$ ls -la /capabilities</span>
+            </div>
+
+            <h2 class="section-title glitch" data-text="Technical Skills">
+                Technical <span>Skills</span>
+            </h2>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-card cyber-skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>
+                            <div class="skill-bar"></div>
+                            Frontend
+                        </h3>
+                    </div>
+                    <div class="skill-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> npm list --frontend
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>React</span>
+                            <span class="skill-level">[████████░░] 85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>JavaScript</span>
+                            <span class="skill-level">[█████████░] 90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>HTML/CSS</span>
+                            <span class="skill-level">[██████████] 95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Tailwind</span>
+                            <span class="skill-level">[████████░░] 80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Vue.js</span>
+                            <span class="skill-level">[███████░░░] 75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-binary">01000110</div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-card cyber-skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>
+                            <div class="skill-bar"></div>
+                            Backend
+                        </h3>
+                    </div>
+                    <div class="skill-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> cat backend_stack.txt
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Node.js</span>
+                            <span class="skill-level">[████████░░] 85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Python</span>
+                            <span class="skill-level">[█████████░] 90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>PHP</span>
+                            <span class="skill-level">[████████░░] 80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>REST APIs</span>
+                            <span class="skill-level">[█████████░] 88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Database Design</span>
+                            <span class="skill-level">[████████░░] 82%</span>
+                        </div>
+                    </div>
+                    <div class="skill-binary">01000010</div>
+                </div>
+
+                <!-- Cybersecurity Skills -->
+                <div class="skill-card cyber-skill-card highlight-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>
+                            <div class="skill-bar"></div>
+                            Cybersecurity
+                        </h3>
+                    </div>
+                    <div class="skill-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">#</span> sudo security-scan --all
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Network Security</span>
+                            <span class="skill-level">[████████░░] 85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Penetration Testing</span>
+                            <span class="skill-level">[███████░░░] 78%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Security Audits</span>
+                            <span class="skill-level">[████████░░] 80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Threat Analysis</span>
+                            <span class="skill-level">[████████░░] 82%</span>
+                        </div>
+                    </div>
+                    <div class="skill-binary">01010011</div>
+                    <div class="security-badge">🔐 CERTIFIED</div>
+                </div>
+
+                <!-- AI & ML Skills -->
+                <div class="skill-card cyber-skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3>
+                            <div class="skill-bar"></div>
+                            AI & ML
+                        </h3>
+                    </div>
+                    <div class="skill-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> python -m ai.capabilities
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Machine Learning</span>
+                            <span class="skill-level">[████████░░] 80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Deep Learning</span>
+                            <span class="skill-level">[███████░░░] 75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>NLP</span>
+                            <span class="skill-level">[███████░░░] 72%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>TensorFlow</span>
+                            <span class="skill-level">[███████░░░] 78%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>PyTorch</span>
+                            <span class="skill-level">[███████░░░] 75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-binary">01000001</div>
+                </div>
+
+                <!-- Infrastructure Skills -->
+                <div class="skill-card cyber-skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3>
+                            <div class="skill-bar"></div>
+                            Infrastructure
+                        </h3>
+                    </div>
+                    <div class="skill-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> systemctl status --infra
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Networking</span>
+                            <span class="skill-level">[████████░░] 85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>System Administration</span>
+                            <span class="skill-level">[████████░░] 82%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Hardware Repair</span>
+                            <span class="skill-level">[█████████░] 88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-dot"></span>
+                            <span>Cloud Services</span>
+                            <span class="skill-level">[███████░░░] 78%</span>
+                        </div>
+                    </div>
+                    <div class="skill-binary">01001001</div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="tools-section">
+                <h3 class="tools-title">
+                    <span class="prompt">$</span> Tools & Technologies
+                </h3>
+                <div class="tools-grid">
+                    <div class="tool-tag">Git</div>
+                    <div class="tool-tag">Docker</div>
+                    <div class="tool-tag">Linux</div>
+                    <div class="tool-tag">VS Code</div>
+                    <div class="tool-tag">MySQL</div>
+                    <div class="tool-tag">PostgreSQL</div>
+                    <div class="tool-tag">MongoDB</div>
+                    <div class="tool-tag">Redis</div>
+                    <div class="tool-tag">Nginx</div>
+                    <div class="tool-tag">Apache</div>
+                    <div class="tool-tag">AWS</div>
+                    <div class="tool-tag">Heroku</div>
+                    <div class="tool-tag">Postman</div>
+                    <div class="tool-tag">Wireshark</div>
+                    <div class="tool-tag">Metasploit</div>
+                    <div class="tool-tag">Burp Suite</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Binary Code -->
+    <div class="floating-binary" id="floatingBinary"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+            &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with &lt;HTML/&gt; CSS JavaScript()
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

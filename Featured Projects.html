@@ -1,34 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Featured Projects — Collins Mosyemi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Projects - Collins Kipchumba Mosyemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"><a href="index.html"><span class="logo-cm">CM</span></a></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="About Me.html">About Me</a>
-        <a href="Technical skils.html">Technical Skills</a>
-        <a href="Featured Projects.html" class="active">Featured Projects</a>
-        <a href="What I Offer.html">What I Offer</a>
-        <a href="Let's Connect.html">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
 
-  <main style="padding:6rem 1.5rem 4rem;">
-    <h1>Featured Projects</h1>
-    <p>Showcase 3–6 projects here with short descriptions, tech stack, links to code, and screenshots.</p>
-  </main>
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
 
-  <footer>
-    <p>&copy; 2024 Collins Kipchumba Mosyemi</p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html" class="active">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="terminal-header-page">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">root@projects:~$ git log --portfolio</span>
+            </div>
+
+            <h2 class="section-title glitch" data-text="Featured Projects">
+                Featured <span>Projects</span>
+            </h2>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Church Management System -->
+                <div class="project-card cyber-project-card">
+                    <div class="project-status">
+                        <span class="status-indicator"></span>
+                        <span>DEPLOYED</span>
+                    </div>
+                    <div class="project-header">
+                        <h3>Church Management System</h3>
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="project-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> project --info church-system
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Comprehensive church administration platform for member management, events, donations, and communications. 
+                        Features real-time analytics, automated email notifications, and secure payment processing.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-icon">⚡</span>
+                            <span>99.9% Uptime</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">👥</span>
+                            <span>500+ Users</span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <a href="https://github.com/mosyemi" target="_blank" class="project-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                        <div class="project-binary">01000011</div>
+                    </div>
+                </div>
+
+                <!-- HMIS Hospital System -->
+                <div class="project-card cyber-project-card">
+                    <div class="project-status">
+                        <span class="status-indicator"></span>
+                        <span>DEPLOYED</span>
+                    </div>
+                    <div class="project-header">
+                        <h3>HMIS Hospital System</h3>
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="project-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> project --info hmis
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Hospital Management Information System for patient records, appointments, billing, and staff management. 
+                        HIPAA-compliant with end-to-end encryption and role-based access control.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-icon">🔒</span>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">📊</span>
+                            <span>10K+ Records</span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <a href="https://github.com/mosyemi" target="_blank" class="project-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                        <div class="project-binary">01001000</div>
+                    </div>
+                </div>
+
+                <!-- AI Phishing Detector -->
+                <div class="project-card cyber-project-card highlight-card">
+                    <div class="project-status highlight-status">
+                        <span class="status-indicator pulsing"></span>
+                        <span>ACTIVE</span>
+                    </div>
+                    <div class="project-header">
+                        <h3>AI Phishing Detector</h3>
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="project-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">#</span> sudo ai-detector --scan
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Machine learning-powered tool to detect and prevent phishing attacks through email and URL analysis. 
+                        Uses NLP and deep learning models with 97% accuracy rate in threat detection.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-icon">🎯</span>
+                            <span>97% Accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">🛡️</span>
+                            <span>5K+ Threats Blocked</span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <a href="https://github.com/mosyemi" target="_blank" class="project-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                        <div class="project-binary">01000001</div>
+                    </div>
+                    <div class="security-badge-project">🔐 SECURITY FOCUSED</div>
+                </div>
+
+                <!-- POS Website -->
+                <div class="project-card cyber-project-card">
+                    <div class="project-status">
+                        <span class="status-indicator"></span>
+                        <span>DEPLOYED</span>
+                    </div>
+                    <div class="project-header">
+                        <h3>POS Website</h3>
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="project-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> project --info pos-system
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Point of Sale web application for retail management with inventory tracking and sales analytics. 
+                        Features include multi-store support, real-time reporting, and integrated payment processing.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Payment Integration</span>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-icon">💰</span>
+                            <span>$100K+ Processed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">📦</span>
+                            <span>1K+ Products</span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <a href="https://github.com/mosyemi" target="_blank" class="project-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                        <div class="project-binary">01010000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Stats -->
+            <div class="github-stats">
+                <h3 class="stats-title">
+                    <span class="prompt">$</span> git --stats
+                </h3>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-number">
+                            <span class="counter" data-target="15">0</span>+
+                        </div>
+                        <div class="stat-label">Public Repositories</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">
+                            <span class="counter" data-target="1000">0</span>+
+                        </div>
+                        <div class="stat-label">Commits This Year</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">
+                            <span class="counter" data-target="50">0</span>+
+                        </div>
+                        <div class="stat-label">Pull Requests</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">
+                            <span class="counter" data-target="25">0</span>+
+                        </div>
+                        <div class="stat-label">Contributors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Binary Code -->
+    <div class="floating-binary" id="floatingBinary"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+            &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with &lt;HTML/&gt; CSS JavaScript()
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

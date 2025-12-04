@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Collins Kipchumba Mosyemi - Portfolio site",
+  "scripts": {
+    "start": "npx http-server -c-1",
+    "validate-links": "python3 tools/validate_links.py"
+  },
+  "author": "Collins Kipchumba Mosyemi",
+  "license": "MIT"
+}
