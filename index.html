@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collins Kipchumba Mosyemi - Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="binary-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-flex">
+                <!-- Profile Picture -->
+                <div class="profile-picture">
+                    <div class="profile-circle">
+                        <div class="scan-effect"></div>
+                        <div class="hexagon-border"></div>
+                        <!-- Profile image -->
+                        <img src="images/collo.png" alt="Collins Kipchumba Mosyemi">
+                        <!-- To add a different image, replace the `src` above with your image path -->
+                    </div>
+                    <div class="binary-ring">
+                        <span>01001000</span>
+                        <span>01000011</span>
+                        <span>01001011</span>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="hero-text">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">root@collinsmosyemi:~$</span>
+                    </div>
+                    
+                    <div class="hero-icon cyber-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    
+                    <h1 class="hero-title glitch" data-text="Collins Kipchumba Mosyemi">
+                        COLLINS KIPCHUMBA MOSYEMI
+                    </h1>
+                    
+                    <div class="typing-container">
+                        <span>&gt;_</span>
+                        <p class="hero-subtitle typing-text">[Software Developer] [Cybersecurity] [System Admin] </p>
+                    </div>
+                    
+                    <div class="security-badges">
+                        <span class="badge">
+                            <span class="badge-icon">🔐</span> Security First
+                        </span>
+                        <span class="badge">
+                            <span class="badge-icon">⚡</span> High Performance
+                        </span>
+                        <span class="badge">
+                            <span class="badge-icon">🛡️</span> Penetration Tested
+                        </span>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="Featured Projects.html" class="btn btn-primary cyber-btn">
+                            <span class="btn-text">[ View Projects ]</span>
+                            <span class="btn-binary">01010110</span>
+                        </a>
+                        <a href="Let's Connect.html" class="btn btn-secondary cyber-btn">
+                            <span class="btn-text">[ Get In Touch ]</span>
+                            <span class="btn-binary">01000011</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Terminal Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="counter" data-target="15">0</span>+
+                            </div>
+                            <div class="stat-label">Projects Deployed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="counter" data-target="99">0</span>%
+                            </div>
+                            <div class="stat-label">Uptime Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="counter" data-target="24">0</span>/7
+                            </div>
+                            <div class="stat-label">System Active</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Binary Code -->
+        <div class="floating-binary" id="floatingBinary"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+             &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with &lt;HTML/&gt; {CSS} JavaScript()
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
