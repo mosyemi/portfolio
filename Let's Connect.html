@@ -1,34 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Let's Connect — Collins Mosyemi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Connect - Collins Kipchumba Mosyemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"><a href="index.html"><span class="logo-cm">CM</span></a></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="About Me.html">About Me</a>
-        <a href="Technical skils.html">Technical Skills</a>
-        <a href="Featured Projects.html">Featured Projects</a>
-        <a href="What I Offer.html">What I Offer</a>
-        <a href="Let's Connect.html" class="active">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
 
-  <main style="padding:6rem 1.5rem 4rem;">
-    <h1>Let's Connect</h1>
-    <p>Contact details placeholder. Add email, social links, and a contact form here.</p>
-  </main>
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
 
-  <footer>
-    <p>&copy; 2024 Collins Kipchumba Mosyemi</p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html" class="active">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="terminal-header-page">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">root@contact:~$ ssh collinsmosyemi@connect</span>
+            </div>
+
+            <h2 class="section-title glitch" data-text="Let's Connect">
+                Let's <span>Connect</span>
+            </h2>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <span class="prompt">$</span> send-message --to collinsmosyemi
+                    </div>
+                    
+                    <form id="contactForm" class="cyber-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">
+                                <span class="prompt">&gt;</span> Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                placeholder="Enter your name..."
+                                class="cyber-input"
+                            >
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <span class="prompt">&gt;</span> Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="your.email@example.com"
+                                class="cyber-input"
+                            >
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">
+                                <span class="prompt">&gt;</span> Subject
+                            </label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                required 
+                                placeholder="What's this about?"
+                                class="cyber-input"
+                            >
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <span class="prompt">&gt;</span> Message
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required 
+                                rows="6"
+                                placeholder="Type your message here..."
+                                class="cyber-input cyber-textarea"
+                            ></textarea>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary cyber-btn submit-btn">
+                            <span class="btn-text">[ Send Message ]</span>
+                            <span class="btn-binary">01010011</span>
+                        </button>
+
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+
+                    <!-- Alternative: For simple mailto form -->
+                    <!-- <p class="form-note">
+                        <span class="prompt">!</span> Note: Replace "https://formspree.io/f/YOUR_FORM_ID" with your actual Formspree form ID,
+                        or use a backend service like EmailJS, Netlify Forms, or PHP mailer.
+                    </p> -->
+                </div>
+
+                <!-- Contact Info & Social -->
+                <div class="contact-info-container">
+                    <!-- Contact Methods -->
+                    <div class="contact-method-card">
+                        <div class="method-header">
+                            <span class="prompt">$</span> contact-methods --list
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:collinsmosyemi@gmail.com" class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>collinsmosyemi@gmail.com</p>
+                                </div>
+                                <div class="method-arrow">→</div>
+                            </a>
+
+                            <a href="https://github.com/mosyemi" target="_blank" class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>GitHub</h4>
+                                    <p>github.com/mosyemi</p>
+                                </div>
+                                <div class="method-arrow">→</div>
+                            </a>
+
+                            <a href="#" class="contact-method" id="linkedinLink">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>LinkedIn</h4>
+                                    <p>Coming Soon</p>
+                                </div>
+                                <div class="method-arrow">→</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Availability Status -->
+                    <div class="availability-card">
+                        <div class="availability-header">
+                            <span class="status-dot pulsing"></span>
+                            <h3>Current Status</h3>
+                        </div>
+                        <div class="availability-content">
+                            <div class="status-item">
+                                <span class="status-label">Availability:</span>
+                                <span class="status-value">OPEN FOR PROJECTS</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Response Time:</span>
+                                <span class="status-value">Within 24 Hours</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Time Zone:</span>
+                                <span class="status-value">EAT (UTC+3)</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Location:</span>
+                                <span class="status-value">Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Available -->
+                    <div class="services-available-card">
+                        <h3>
+                            <span class="prompt">$</span> Available For
+                        </h3>
+                        <div class="available-services">
+                            <div class="available-item">
+                                <span class="service-icon-small">💼</span>
+                                <span>Freelance Projects</span>
+                            </div>
+                            <div class="available-item">
+                                <span class="service-icon-small">🔐</span>
+                                <span>Security Consulting</span>
+                            </div>
+                            <div class="available-item">
+                                <span class="service-icon-small">🤝</span>
+                                <span>Technical Collaboration</span>
+                            </div>
+                            <div class="available-item">
+                                <span class="service-icon-small">💡</span>
+                                <span>Code Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fun Fact -->
+                    <div class="fun-fact-card">
+                        <div class="fun-fact-header">
+                            <span class="prompt">$</span> echo $FUN_FACT
+                        </div>
+                        <p class="fun-fact-text">
+                            "I drink coffee while debugging code at 3 AM. It's not a bug, it's a feature! ☕💻"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Binary Code -->
+    <div class="floating-binary" id="floatingBinary"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+            <span class="terminal-prompt">root@collinsmosyemi:~$</span> 
+            &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with <span class="code-highlight">&lt;HTML/&gt;</span> 
+            <span class="code-highlight">{CSS}</span> 
+            <span class="code-highlight">JavaScript()</span>
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // If not using Formspree or similar service, prevent default and show message
+            // e.preventDefault();
+            
+            const formStatus = document.getElementById('formStatus');
+            
+            // Show sending message
+            formStatus.innerHTML = '<span class="status-sending">⏳ Sending message...</span>';
+            
+            // You can add custom form submission logic here
+            // For example, using fetch() to send to your backend
+            
+            // Simulated success message (remove this when using real backend)
+            setTimeout(() => {
+                formStatus.innerHTML = '<span class="status-success">✓ Message sent successfully!</span>';
+                this.reset();
+            }, 2000);
+        });
+
+        // LinkedIn link handler (temporary)
+        document.getElementById('linkedinLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('LinkedIn profile coming soon! Feel free to reach out via email or GitHub in the meantime.');
+        });
+    </script>
 </body>
 </html>

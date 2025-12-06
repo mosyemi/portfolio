@@ -1,34 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>What I Offer — Collins Mosyemi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What I Offer - Collins Kipchumba Mosyemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"><a href="index.html"><span class="logo-cm">CM</span></a></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="About Me.html">About Me</a>
-        <a href="Technical skils.html">Technical Skills</a>
-        <a href="Featured Projects.html">Featured Projects</a>
-        <a href="What I Offer.html" class="active">What I Offer</a>
-        <a href="Let's Connect.html">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrixCanvas"></canvas>
 
-  <main style="padding:6rem 1.5rem 4rem;">
-    <h1>What I Offer</h1>
-    <p>List services such as Freelance Development, Security Assessments, Architecture Reviews, and Consulting.</p>
-  </main>
+    <!-- Scan Lines Effect -->
+    <div class="scanlines"></div>
 
-  <footer>
-    <p>&copy; 2024 Collins Kipchumba Mosyemi</p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cm glitch" data-text="CM">CM</span>
+                    <span class="logo-dot">.</span>
+                    <span class="terminal-cursor">_</span>
+                </a>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span class="nav-icon">&gt;</span> Home
+                </a>
+                <a href="About Me.html">
+                    <span class="nav-icon">&gt;</span> About Me
+                </a>
+                <a href="Technical skils.html">
+                    <span class="nav-icon">&gt;</span> Technical Skills
+                </a>
+                <a href="Featured Projects.html">
+                    <span class="nav-icon">&gt;</span> Featured Projects
+                </a>
+                <a href="What I Offer.html" class="active">
+                    <span class="nav-icon">&gt;</span> What I Offer
+                </a>
+                <a href="Let's Connect.html">
+                    <span class="nav-icon">&gt;</span> Let's Connect
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="terminal-header-page">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">root@services:~$ cat offerings.json</span>
+            </div>
+
+            <h2 class="section-title glitch" data-text="What I Offer">
+                What I <span>Offer</span>
+            </h2>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- Full-Stack Development -->
+                <div class="service-card cyber-service-card">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">$</span> service --type fullstack
+                    </div>
+                    <p>Custom web applications with modern frameworks and best practices. From responsive frontends to robust backend APIs.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> React, Vue.js, Angular</li>
+                        <li><span class="feature-dot">●</span> Node.js, Python, PHP</li>
+                        <li><span class="feature-dot">●</span> RESTful & GraphQL APIs</li>
+                        <li><span class="feature-dot">●</span> Database Design & Optimization</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">⚡</span> Fast Delivery
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="service-card cyber-service-card highlight-service">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="icon-glow pulsing"></div>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">#</span> service --type security
+                    </div>
+                    <p>Security audits, penetration testing, and threat analysis to protect your digital assets from vulnerabilities.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> Vulnerability Assessment</li>
+                        <li><span class="feature-dot">●</span> Penetration Testing</li>
+                        <li><span class="feature-dot">●</span> Security Audits</li>
+                        <li><span class="feature-dot">●</span> Incident Response</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">🔐</span> Security First
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="service-card cyber-service-card">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">$</span> service --type ai-ml
+                    </div>
+                    <p>Intelligent systems, predictive models, and data analytics solutions powered by cutting-edge AI technologies.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> Predictive Analytics</li>
+                        <li><span class="feature-dot">●</span> Natural Language Processing</li>
+                        <li><span class="feature-dot">●</span> Computer Vision</li>
+                        <li><span class="feature-dot">●</span> Model Training & Deployment</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">🤖</span> AI Powered
+                    </div>
+                </div>
+
+                <!-- Networking & Infrastructure -->
+                <div class="service-card cyber-service-card">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Networking & Infrastructure</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">$</span> service --type infra
+                    </div>
+                    <p>Network setup, configuration, and system administration for reliable and scalable IT infrastructure.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> Network Design & Setup</li>
+                        <li><span class="feature-dot">●</span> Server Configuration</li>
+                        <li><span class="feature-dot">●</span> Cloud Infrastructure (AWS, Azure)</li>
+                        <li><span class="feature-dot">●</span> Network Security</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">📡</span> Always Connected
+                    </div>
+                </div>
+
+                <!-- Computer Repair & Maintenance -->
+                <div class="service-card cyber-service-card">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Computer Repair & Maintenance</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">$</span> service --type hardware
+                    </div>
+                    <p>Hardware troubleshooting, repairs, and system optimization to keep your systems running at peak performance.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> Hardware Diagnostics</li>
+                        <li><span class="feature-dot">●</span> Component Replacement</li>
+                        <li><span class="feature-dot">●</span> System Optimization</li>
+                        <li><span class="feature-dot">●</span> Data Recovery</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">🔧</span> Expert Support
+                    </div>
+                </div>
+
+                <!-- Technical Consulting -->
+                <div class="service-card cyber-service-card">
+                    <div class="service-icon-container">
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Technical Consulting</h3>
+                    <div class="service-terminal">
+                        <span class="prompt">$</span> service --type consulting
+                    </div>
+                    <p>Strategic technology guidance and architectural planning to help your business make informed technical decisions.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-dot">●</span> Technology Strategy</li>
+                        <li><span class="feature-dot">●</span> System Architecture</li>
+                        <li><span class="feature-dot">●</span> Code Review</li>
+                        <li><span class="feature-dot">●</span> Performance Optimization</li>
+                    </ul>
+                    <div class="service-badge">
+                        <span class="badge-icon">💡</span> Strategic Advice
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="process-section">
+                <h3 class="process-title">
+                    <span class="prompt">$</span> How I Work
+                </h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Discovery</h4>
+                            <p>Understanding your requirements and goals</p>
+                        </div>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Planning</h4>
+                            <p>Creating a detailed roadmap and timeline</p>
+                        </div>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Development</h4>
+                            <p>Building and testing your solution</p>
+                        </div>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Deployment</h4>
+                            <p>Launching and providing ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>Ready to Start Your Project?</h3>
+                    <p>Let's discuss how I can help bring your ideas to life with secure, scalable, and innovative solutions.</p>
+                    <a href="Let's Connect.html" class="btn btn-primary cyber-btn">
+                        <span class="btn-text">[ Contact Me Now ]</span>
+                        <span class="btn-binary">01000011</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Binary Code -->
+    <div class="floating-binary" id="floatingBinary"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-binary">010010000100001101001011</div>
+        <p>
+            <span class="terminal-prompt">root@collinsmosyemi:~$</span> 
+            &copy; 2024 Collins Kipchumba Mosyemi. All rights reserved.
+        </p>
+        <p class="footer-tech">
+            Built with <span class="code-highlight">&lt;HTML/&gt;</span> 
+            <span class="code-highlight">{CSS}</span> 
+            <span class="code-highlight">JavaScript()</span>
+        </p>
+        <div class="footer-hash">SHA-256: a3f5b8c2d9e1f7a4b6c8d0e2f4a6b8c0</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
