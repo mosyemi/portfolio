@@ -42,28 +42,7 @@
     }
 }
 
-/* EOF */
-}
 
-/* Emergency visibility fixes for content pages
-   Ensure content sections and service cards are visible and use the primary green color. */
-@media (min-width: 320px) {
-    .content-section, .content-section .container, .services-grid, .service-card, .service-card * {
-        visibility: visible !important;
-        display: block !important;
-        color: var(--primary) !important;
-        z-index: 2000 !important;
-        opacity: 1 !important;
-    }
-
-    .section-title, .terminal-header-page, .service-terminal, .service-features li, .service-badge {
-        color: var(--primary) !important;
-    }
-
-    .content-section { z-index: 2000 !important; }
-}
-
- 
 /* Color variables: restore original green cyber theme */
 :root {
     --bg: #000000;
@@ -2109,30 +2088,3 @@ footer p {
     }
 }
 
-/* Strong override to ensure homepage hero stays a left-aligned row on desktop */
-@media (min-width: 1024px) {
-    .hero-section .hero-content .hero-flex {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-        gap: 2.5rem !important;
-    }
-    .hero-section .hero-content .profile-picture {
-        margin-right: 2.5rem !important;
-        margin-left: 0 !important;
-    }
-    .hero-section .hero-content .profile-circle {
-        width: 220px !important;
-        height: 220px !important;
-    }
-    .hero-section .hero-content .profile-circle img {
-        object-fit: cover !important;
-        object-position: 50% 28% !important;
-        display: block !important;
-    }
-    .hero-section .hero-content .hero-text {
-        margin-top: -48px !important;
-        text-align: left !important;
-    }
-}
